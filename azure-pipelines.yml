@@ -32,7 +32,7 @@ stages:
       steps:
         - task: Docker@2
           inputs:
-            containerRegistry: 'dockerhub-connection'  # Your Docker Hub service connection name
+            containerRegistry: 'dockerhub-token'  # Your Docker Hub service connection name
             repository: 'alikhan24/docker-auto'        # Your Docker Hub repository name
             command: 'push'
             tags: '$(tag) $(Build.BuildId)'            # Use the same tag from the Build stage
